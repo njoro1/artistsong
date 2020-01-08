@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
+use App\Songs;
 class SongsController extends Controller
 {
     /**
@@ -15,7 +14,7 @@ class SongsController extends Controller
     {
         //
 
-        // $songs=Songs::all();
+         $songs=Songs::all();
 
         return view('songs.index',compact('songs'));
     }

@@ -18,14 +18,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app2.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/home') }}">
-                  <img src="{{ asset('img/medias.jpg') }}" alt="Media" style="height:40px;">Media
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -73,34 +72,6 @@
             </div>
         </nav>
 
-<div class="row" style=" width: 100%">
-    <div class="sidebar" style="">
-        <ul class="sidebar-menu" style="list-style: none;padding: 0px">
-            <li>
-                <a href="http://localhost/artistsongs/artistsong/public/home" class="navio"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
-            </li>
-            
-                    <li  data-toggle="collapse" data-target="#media" class="navio">
-                  <i class="fas fa-h-square"></i> 
-                  Media 
-                  <span class="arrow"></span>
-                   </li>
-                     <ul class="sub-menu collapse" id="media">
-                    <a href="#" class="navio" style="width: 110% ; margin-left: -10%"><i class="fa fa-edit"></i>Create</a>
-                    <a href="#" class="navio" style="width: 110% ; margin-left: -10%"><i class="fa fa-laptop"></i>View</a>
-                    <a href="#" class="navio" style="width: 110% ; margin-left: -10%"><i class="fa fa-folder-open"></i>subscriptions</a>
-                   
-                </ul>
-
-              <li>
-                <a href="http://localhost/artistsongs/artistsong/public/home" class="navio"><i class="fas fa-tachometer-alt"></i>Users</a>
-            </li>
-        </ul>
-        
-    </div>
-    
-
-</div>
         <main class="py-4">
             @yield('content')
         </main>
