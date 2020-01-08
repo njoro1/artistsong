@@ -1,2 +1,2 @@
-I love this;
-Me too!!!
+@extends('layouts.app')
+
